@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayo Masak! - Temukan Resep Favoritmu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>🍳 Ayo Masak!</h1>
+        <p>Temukan inspirasi memasak dari 1000+ resep pilihan</p>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Cari resep, bahan, atau kategori...">
+                <div class="filters">
+                    <button class="filter-btn" data-filter="quick">
+                        <i class="fas fa-clock"></i> Express
+                    </button>
+                    <button class="filter-btn" data-filter="easy">
+                        <i class="fas fa-star"></i> Pemula
+                    </button>
+                    <button class="filter-btn" data-filter="favorite">
+                        <i class="fas fa-heart"></i> Favorit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div id="product-list"></div>
+        <div class="recipes-grid" id="recipesGrid">
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+        </div>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    <script src="js/product.js"></script>
+</body>
+
+</html>
