@@ -6,41 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayo Masak! - Temukan Resep Favoritmu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
-        <h1>🍳 Ayo Masak!</h1>
-        <p>Temukan inspirasi memasak dari 1000+ resep pilihan</p>
+        <div class="header-content">
+            <h1>Resep Masakan Indonesia</h1>
+            <p>Temukan berbagai resep masakan Indonesia yang lezat dan mudah dibuat. Dari masakan tradisional hingga modern.</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Resep</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Kategori</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Pengguna</div>
+                </div>
+            </div>
+        </div>
+        <div class="wave"></div>
     </header>
 
     <nav class="nav">
         <div class="nav-container">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Cari resep, bahan, atau kategori...">
-                <div class="filters">
-                    <button class="filter-btn" data-filter="quick">
-                        <i class="fas fa-clock"></i> Express
+            <div class="search-filter-container">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Cari resep...">
+                </div>
+                <div class="filter-container">
+                    <button class="filter-toggle">
+                        <span>Filter</span>
+                        <i class="fas fa-filter"></i>
                     </button>
-                    <button class="filter-btn" data-filter="easy">
-                        <i class="fas fa-star"></i> Pemula
-                    </button>
-                    <button class="filter-btn" data-filter="favorite">
-                        <i class="fas fa-heart"></i> Favorit
-                    </button>
+                    <div class="filters">
+                        <button class="filter-btn" data-filter="quick">
+                            <i class="fas fa-clock"></i>
+                            <span>Express</span>
+                        </button>
+                        <button class="filter-btn" data-filter="easy">
+                            <i class="fas fa-star"></i>
+                            <span>Pemula</span>
+                        </button>
+                        <button class="filter-btn" data-filter="favorite">
+                            <i class="fas fa-heart"></i>
+                            <span>Favorit</span>
+                        </button>
+                    </div>
                 </div>
             </div>
+            <div class="active-filters"></div>
         </div>
     </nav>
 
         <div id="product-list"></div>
         <div class="recipes-grid" id="recipesGrid">
-        </div>
-
-        <!-- Loading Spinner -->
-        <div class="loading" id="loading">
-            <div class="loading-spinner"></div>
         </div>
     </main>
 
